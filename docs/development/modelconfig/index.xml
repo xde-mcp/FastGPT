@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>模型配置方案 on FastGPT</title><link>https://doc.tryfastgpt.ai/docs/development/modelconfig/</link><description>Recent content in 模型配置方案 on FastGPT</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://doc.tryfastgpt.ai/docs/development/modelconfig/index.xml" rel="self" type="application/rss+xml"/><item><title>FastGPT 模型配置说明</title><link>https://doc.tryfastgpt.ai/docs/development/modelconfig/intro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://doc.tryfastgpt.ai/docs/development/modelconfig/intro/</guid><description>在 4.8.20 版本以前，FastGPT 模型配置在 config.json 文件中声明，你可以在 https://github.com/labring/FastGPT/blob/main/projects/app/data/model.json 中找到旧版的配置文件示例。
 从 4.8.20 版本开始，你可以直接在 FastGPT 页面中进行模型配置，并且系统内置了大量模型，无需从 0 开始配置。下面介绍模型配置的基本流程：
-1. 使用 OneAPI 对接模型提供商 link可以使用 OneAPI 接入教程 来进行模型聚合，从而可以对接更多模型提供商。你需要先在各服务商申请好 API 接入 OneAPI 后，才能在 FastGPT 中使用这些模型。示例流程如下：
+配置模型 link1. 使用 OneAPI 对接模型提供商 link可以使用 OneAPI 接入教程 来进行模型聚合，从而可以对接更多模型提供商。你需要先在各服务商申请好 API 接入 OneAPI 后，才能在 FastGPT 中使用这些模型。示例流程如下：
 除了各模型官方的服务外，还有一些第三方服务商提供模型接入服务，当然你也可以用 Ollama 等来部署本地模型，最终都需要接入 OneAPI，下面是一些第三方服务商：
 SiliconCloud(硅基流动): 提供开源模型调用的平台。
 Sealos AIProxy: 提供国内各家模型代理，无需逐一申请 api。

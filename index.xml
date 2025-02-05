@@ -440,7 +440,7 @@ docker ps -a 查看所有容器运行状态，检查是否全部 running，如�
 能否纯本地运行 link可以。需要准备好向量模型和LLM模型。
 其他模型没法进行问题分类/内容提取 link 看日志。如果提示 JSON invalid，not support tool 之类的，说明该模型不支持工具调用或函数调用，需要设置toolChoice=false和functionCall=false，就会默认走提示词模式。目前内置提示词仅针对了商业模型API进行测试。问题分类基本可用，内容提取不太行。 如果已经配置正常，并且没有错误日志，则说明可能提示词不太适合该模型，可以通过修改customCQPrompt来自定义提示词。 页面崩溃 link 关闭翻译 检查配置文件是否正常加载，如果没有正常加载会导致缺失系统信息，在某些操作下会导致空指针。 95%情况是配置文件不对。会提示 xxx undefined 提示URI malformed，请 Issue 反馈具体操作和页面，这是由于特殊字符串编码解析报错。 某些api不兼容问题（较少） 开启内容补全后，响应速度变慢 link 问题补全需要经过一轮AI生成。 会进行3~5轮的查询，如果数据库性能不足，会有明显影响。 页面中可以正常回复，API 报错 link页面中是用 stream=true 模式，所以API也需要设置 stream=true 来进行测试。部分模型接口（国产居多）非 Stream 的兼容有点垃圾。 和上一个问题一样，curl 测试。</description></item><item><title>FastGPT 模型配置说明</title><link>https://doc.tryfastgpt.ai/docs/development/modelconfig/intro/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://doc.tryfastgpt.ai/docs/development/modelconfig/intro/</guid><description>在 4.8.20 版本以前，FastGPT 模型配置在 config.json 文件中声明，你可以在 https://github.com/labring/FastGPT/blob/main/projects/app/data/model.json 中找到旧版的配置文件示例。
 从 4.8.20 版本开始，你可以直接在 FastGPT 页面中进行模型配置，并且系统内置了大量模型，无需从 0 开始配置。下面介绍模型配置的基本流程：
-1. 使用 OneAPI 对接模型提供商 link可以使用 OneAPI 接入教程 来进行模型聚合，从而可以对接更多模型提供商。你需要先在各服务商申请好 API 接入 OneAPI 后，才能在 FastGPT 中使用这些模型。示例流程如下：
+配置模型 link1. 使用 OneAPI 对接模型提供商 link可以使用 OneAPI 接入教程 来进行模型聚合，从而可以对接更多模型提供商。你需要先在各服务商申请好 API 接入 OneAPI 后，才能在 FastGPT 中使用这些模型。示例流程如下：
 除了各模型官方的服务外，还有一些第三方服务商提供模型接入服务，当然你也可以用 Ollama 等来部署本地模型，最终都需要接入 OneAPI，下面是一些第三方服务商：
 SiliconCloud(硅基流动): 提供开源模型调用的平台。
 Sealos AIProxy: 提供国内各家模型代理，无需逐一申请 api。
